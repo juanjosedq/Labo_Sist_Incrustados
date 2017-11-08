@@ -114,6 +114,8 @@ main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h
+main.obj: ../Defines.hpp
+main.obj: ../Defines.hpp
 main.obj: ../LED.hpp
 main.obj: C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/inc/msp.h
 main.obj: C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/driverlib/driverlib.h
@@ -277,6 +279,8 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h: 
+../Defines.hpp: 
+../Defines.hpp: 
 ../LED.hpp: 
 C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/inc/msp.h: 
 C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/driverlib/driverlib.h: 

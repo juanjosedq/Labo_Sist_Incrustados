@@ -112,6 +112,7 @@ Task.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c
 Task.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c
 Task.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h
 Task.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h
+Task.obj: ../Defines.hpp
 
 ../Task.cpp: 
 ../Task.hpp: 
@@ -225,3 +226,4 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h: 
+../Defines.hpp: 

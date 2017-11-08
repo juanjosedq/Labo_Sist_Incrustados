@@ -114,6 +114,7 @@ Caldif.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.
 Caldif.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c
 Caldif.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h
 Caldif.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h
+Caldif.obj: ../Defines.hpp
 Caldif.obj: C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/driverlib/driverlib.h
 Caldif.obj: C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/driverlib/adc14.h
 Caldif.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdbool.h
@@ -153,6 +154,7 @@ Caldif.obj: C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/grlib/grlib.h
 Caldif.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdio.h
 Caldif.obj: ../Defines.hpp
 Caldif.obj: ../Scheduler.hpp
+Caldif.obj: ../Defines.hpp
 
 ../Caldif.cpp: 
 ../Caldif.hpp: 
@@ -268,6 +270,7 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h: 
+../Defines.hpp: 
 C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/driverlib/driverlib.h: 
 C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/devices/msp432p4xx/driverlib/adc14.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdbool.h: 
@@ -307,3 +310,4 @@ C:/ti/simplelink_msp432_sdk_1_40_01_00/source/ti/grlib/grlib.h:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdio.h: 
 ../Defines.hpp: 
 ../Scheduler.hpp: 
+../Defines.hpp: 

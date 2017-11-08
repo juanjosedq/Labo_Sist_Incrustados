@@ -113,6 +113,8 @@ Scheduler.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_g
 Scheduler.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c
 Scheduler.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h
 Scheduler.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h
+Scheduler.obj: ../Defines.hpp
+Scheduler.obj: ../Defines.hpp
 
 ../Scheduler.cpp: 
 ../Scheduler.hpp: 
@@ -227,3 +229,5 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h: 
+../Defines.hpp: 
+../Defines.hpp: 

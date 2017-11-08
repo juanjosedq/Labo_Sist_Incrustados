@@ -4,9 +4,7 @@
 //#include "Scheduler.hpp"
 #include "msp.h"
 #include <string>
-
-#define NO_ERR 0
-#define RET_ERR 1
+#include "Defines.hpp"
 
 using namespace std;
 

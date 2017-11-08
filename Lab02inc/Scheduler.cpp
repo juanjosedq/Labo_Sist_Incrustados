@@ -3,6 +3,7 @@
 // - Scheduler constructor
 Scheduler::Scheduler()
 {
+    m_uCantTask = 0;
     m_u8OpenSlots = static_cast<uint8_t>(NUMBER_OF_SLOTS);
     m_u8NextSlot = 0;
     m_IndexPila = 0;                         // Para recorrer la pila y asignar memoria a las tareas
@@ -33,6 +34,7 @@ uint8_t Scheduler::attach(uint8_t Type ,Task * i_ToAttach, uint64_t i_u64TickInt
 	l_st_StructToAttach.u64TickIntervalInitValue = i_u64TickInterval;
 	l_st_StructToAttach.ToExecute = false;
 	l_st_StructToAttach.pToAttach->m_pSTaskMsj = &m_InfoBox[0];
+	m_uCantTask = m_uCantTask+1;
 
 
     if((m_u8OpenSlots>0) && (m_u8NextSlot < NUMBER_OF_SLOTS))
@@ -135,9 +137,17 @@ uint8_t Scheduler::CalculateNextSchedule(void)
 
     return(NO_ERR);
 }
+
 uint8_t Scheduler::SortScheduleByPriority(Task * i_pSchedule)
 {
-
+    st_TaskInfo Temp;
+    for(int cont=0; cont< m_uCantTask-1; cont++){
+        if(m_aSchedule[cont].u8Priority < m_aSchedule[cont+1].u8Priority){
+            Temp  =  m_aSchedule[cont+1];
+            m_aSchedule[cont+1] =  m_aSchedule[cont];
+            m_aSchedule[cont] =  Temp;
+        }
+    }
     return(NO_ERR);
 }
 

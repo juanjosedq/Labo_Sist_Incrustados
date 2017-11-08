@@ -3,13 +3,11 @@
 #include "Scheduler.hpp"
 #include "Task.hpp"
 #include "LED.hpp"
-
 //Includes para la pantalla LCD
 #include <ti/devices/msp432p4xx/inc/msp.h>
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
 #include <ti/grlib/grlib.h>
 #include "LcdDriver/Crystalfontz128x128_ST7735.h"
-//#include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
 
 #include "Defines.hpp"
@@ -19,26 +17,23 @@
 // ##########################
 // Global/Static declarations
 // ##########################
-uint8_t Task::m_u8NextTaskID = 1; // - Init task ID
-volatile static uint64_t g_SystemTicks = 0; // - The system counter.
-Scheduler g_MainScheduler; // - Instantiate a Scheduler
-//uint64_t prueba[3];
+uint8_t Task::m_u8NextTaskID = 1;             // - Init task ID
+volatile static uint64_t g_SystemTicks = 0;   // - The system counter.
+Scheduler g_MainScheduler;                    // - Instantiate a Scheduler
 
 /* Graphic library context */
 Graphics_Context g_sContext;
-
 /* ADC results buffer */
 uint64_t resultsBuffer[3];
 
-// Rectangulo a pintar
 Graphics_Rectangle g_rect;
 
 // #########################
 //          MAIN
 // #########################
+
 void main(void)
 {
-
     /* Halting WDT and disabling master interrupts */
         MAP_WDT_A_holdTimer();
         MAP_Interrupt_disableMaster();
@@ -65,9 +60,17 @@ void main(void)
 
         /* Initializes graphics context */
             Graphics_initContext(&g_sContext, &g_sCrystalfontz128x128, &g_sCrystalfontz128x128_funcs);
-            Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_LIGHT_BLUE);
-            Graphics_setBackgroundColor(&g_sContext, GRAPHICS_COLOR_LIGHT_BLUE);
+            Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_BLUE);
+            Graphics_setBackgroundColor(&g_sContext, GRAPHICS_COLOR_BLUE);
             GrContextFontSet(&g_sContext, &g_sFontFixed6x8);
+
+            g_rect.xMin = 0;
+            g_rect.yMin =0;
+            g_rect.xMax = 128;
+            g_rect.yMax = 64;
+
+            Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_BLUE);
+            Graphics_fillRectangle(&g_sContext, &g_rect);
 
             /* Configures Pin 4.0, 4.2, and 6.1 as ADC input */
             MAP_GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P4, GPIO_PIN0 | GPIO_PIN2, GPIO_TERTIARY_MODULE_FUNCTION);
@@ -115,6 +118,7 @@ void main(void)
             Caldif caldif(1);
 
 //*************************************************************************
+            //Asignar memoria
 //*************************************************************************
             paint.m_pWTaskMsj = g_MainScheduler.AssignMemoryToTask(3U);
             caldif.m_pWTaskMsj = g_MainScheduler.AssignMemoryToTask(3U);
@@ -137,7 +141,7 @@ void main(void)
         {
             //- Only execute the tasks if one tick has passed.
             g_MainScheduler.m_u64ticks = g_SystemTicks;
-            paint.SendMessage(resultsBuffer, 2);
+            ADC.SendMessage(resultsBuffer, 2);
             g_MainScheduler.run();
         }
     }
@@ -170,6 +174,7 @@ void Setup(void)
 	// - Enable the interrupt in the NVIC
 	// - Start the timer in UP mode.
 	// - Re-enable interrupts
+
 	TIMER32_1->LOAD = TIMER32_COUNT; //~1ms ---> a 3Mhz
 	TIMER32_1->CONTROL = TIMER32_CONTROL_SIZE | TIMER32_CONTROL_PRESCALE_0 | TIMER32_CONTROL_MODE | TIMER32_CONTROL_IE | TIMER32_CONTROL_ENABLE;
 	NVIC_SetPriority(T32_INT1_IRQn,1);

@@ -114,6 +114,8 @@ LED.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c
 LED.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c
 LED.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h
 LED.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h
+LED.obj: ../Defines.hpp
+LED.obj: ../Defines.hpp
 
 ../LED.cpp: 
 ../LED.hpp: 
@@ -229,3 +231,5 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__num_get.c:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__string_io.c: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__epilog.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/s__config_compat_post.h: 
+../Defines.hpp: 
+../Defines.hpp: 

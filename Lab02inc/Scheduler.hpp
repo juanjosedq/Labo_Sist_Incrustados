@@ -9,14 +9,7 @@
 #define TASKS_SCHEDULER_HPP_
 #include "msp.h"
 #include "Task.hpp"
-
-#define NUMBER_OF_SLOTS 5
-#define NULL            0
-#define PilaSize    10
-#define OneShot     1
-#define Periodic    2
-#define Continues   3
-#define BufferSize  10
+#include "Defines.hpp"
 
 // - This structure defines the Task Information
 
@@ -36,7 +29,7 @@ class Scheduler
 {
 public:
     Scheduler();
-
+    uint8_t m_uCantTask;
     uint8_t * m_MsjInfo;
     uint64_t m_PilaMsj[PilaSize];           // Espacio de Memoria Asignado para Scheduler. Este sera asignado a las tareas posteriormente por Scheduler
     uint16_t m_IndexPila;                   // Para asignar Memoria a los mensajes de tareas del Scheduler
